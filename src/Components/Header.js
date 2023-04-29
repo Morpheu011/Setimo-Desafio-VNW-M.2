@@ -6,34 +6,32 @@ import styled from "styled-components";
 /* ESTILIZAÇÃO */
 
 const HeaderS = styled.header`
-/* display: flex;
-justify-content: center;
-align-items: center; */
-border:solid 1px white;`
+display: flex;
+justify-content: center;`
 
 const ContainerImagesHeader = styled.div`
+height: 44vh;
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
-`
+align-items: center;`
+
 const ImgHover = styled.img`
-/* definir um tamanho para a imagem depois */
-/* deixar ela abaixo da imagem mais colada ao aparecer*/
+position: relative;
+bottom: 4.5rem;
+left: 0.5rem;
+width: 26vw;
+height: 30vh;
 background-color: transparent;
 opacity: 0;
-transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-`
+transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;`
 
 const Img = styled.img`
-/* talvez criar um hover que aplie a imagem */
-/* definir um tamanho para a imagem depois */
+:hover{scale: 1.1; transition: 800ms ease-in-out; cursor: pointer;}
+width: 20vw;
+height: 35vh;
+transition: 800ms ease-out;
 &:hover + ${ImgHover} {
-  opacity: 1;}
-
-`
-
-
+  opacity: 1;}`
 /* ESTILIZAÇÃO */
 export default class Header extends Component {
   render() {
